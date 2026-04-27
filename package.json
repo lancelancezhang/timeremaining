@@ -1,0 +1,24 @@
+{
+  "name": "parenttimer-reactapp",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "html2canvas": "^1.4.1",
+    "react": "^19.1.1",
+    "react-dom": "^19.1.1",
+    "react-select": "^5.10.2"
+  },
+  "devDependencies": {
+    "@types/react": "^19.1.12",
+    "@types/react-dom": "^19.1.9",
+    "@vitejs/plugin-react": "^5.0.2",
+    "typescript": "~6.0.2",
+    "vite": "^8.0.10"
+  }
+}
