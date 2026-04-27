@@ -261,21 +261,8 @@ export default function App() {
     return `Mum: ${mumAge}`
   }, [dadAge, mumAge])
 
-  const siteUrl = useMemo(() => {
-    const fromEnv = import.meta.env.VITE_SITE_URL
-    if (typeof fromEnv === 'string' && fromEnv.trim()) {
-      const u = fromEnv.trim()
-      return u.endsWith('/') ? u : `${u}/`
-    }
-    if (typeof window !== 'undefined') {
-      return `${window.location.origin}/`
-    }
-    return ''
-  }, [])
-
   const shareCardUrl = useMemo(() => {
-    // Sample URL for now (replace with your live domain when ready)
-    return 'https://example.com/parenttimer'
+    return 'https://timeremaining-xi.vercel.app/'
   }, [])
 
   const tweetBody = useMemo(() => {
@@ -292,9 +279,9 @@ export default function App() {
       parts.push(`and ${solo} left with Dad after Mum passes`)
     }
 
-    const link = siteUrl || shareCardUrl
+    const link = shareCardUrl
     return `${parts.join(' ')}.\n${link}`.trim()
-  }, [hasEnoughInputs, timeBreakdown, siteUrl, shareCardUrl])
+  }, [hasEnoughInputs, timeBreakdown, shareCardUrl])
 
   const xIntentHref = useMemo(() => {
     const u = new URL('https://twitter.com/intent/tweet')
