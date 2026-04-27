@@ -5,7 +5,7 @@ import Select from 'react-select'
 import './App.css'
 import { formSelectStyles } from './formSelectStyles'
 
-const PAGE_TITLE = 'How much time left with my parents…'
+const PAGE_TITLE = 'How much time left...'
 
 type NumberSelectOption = { value: number; label: string }
 
